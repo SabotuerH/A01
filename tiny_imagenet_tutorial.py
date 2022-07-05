@@ -35,7 +35,7 @@ import torch.nn as nn
 
 ########################################################################
 # import resnet1202 from resnet.py
-from resnet import *
+from models.resnet import *
 
 net = resnet20(num_classes=200)
 net = net.to(device)
@@ -76,7 +76,7 @@ print('Finished Training')
 ########################################################################
 # Let's quickly save our trained model:
 
-PATH = './tiny_imagenet_resnet20.pth'
+PATH = './checkpoints/tiny_imagenet_resnet20.pth'
 torch.save(net.state_dict(), PATH)
 
 ########################################################################
